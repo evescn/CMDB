@@ -1,4 +1,10 @@
-ENGINE = 'agent'
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DEBUG = True
+FILE_PATH = os.path.join(BASE_DIR, 'files')
+
+ENGINE = 'ssh'
 
 ENGINE_DICT = {
     'agent': 'core.engine.agent.AgentHandler',
@@ -8,13 +14,17 @@ ENGINE_DICT = {
 }
 
 PLUGINS_DICT = {
-    # 'cpu': 'core.plugins.cpu.Cpu',
+    'basic': 'core.plugins.basic.Basic',
+    'main_board': 'core.plugins.main_board.MainBoard',
+    'cpu': 'core.plugins.cpu.Cpu',
     'disk': 'core.plugins.disk.Disk',
-    # 'memory': 'core.plugins.memory.Memory',
+    'memory': 'core.plugins.memory.Memory',
     'nic': 'core.plugins.nic.Nic',
 }
+
+ASSET_URL = 'http://127.0.0.1:8000/api/asset/'
 
 SSH_PORT = 22
 SSH_USERNAME = 'root'
 SSH_PASSWORD = ''
-SSH_KEY = ''
+SSH_KEY = '/Users/evescn/.ssh/id_rsa'

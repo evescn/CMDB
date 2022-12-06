@@ -4,10 +4,16 @@ import importlib
 
 
 def get_server_info(handler, hostname=None):
-    for name, string in settings.ENGINE_DICT.items():
+    info = {}
+
+    for name, string in settings.PLUGINS_DICT.items():
+        # 反射
         # print(name, string)
         cls = get_class(string)
-        print(cls)
+        # print(cls)
         obj = cls()
-        ret = obj.process(handler, hostname=None)
-        print(ret)
+        ret = obj.process(handler, hostname)
+
+        info[name] = ret
+
+    return info
