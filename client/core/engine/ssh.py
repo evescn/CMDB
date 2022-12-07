@@ -66,6 +66,7 @@ class SSHHandler(BaseHandler):
         pool = ThreadPoolExecutor(20)
         # 循环主机列表，采集资产信息 cpu disk memory base + 向 API 汇报资产
         for hostname in host_list:
+            print(hostname['hostname'])
             pool.submit(self.task, hostname['hostname'])
 
     def cmd(self, command, hostname):
@@ -90,8 +91,9 @@ class SSHHandler(BaseHandler):
         ssh = self.ssh_dict.get(hostname)
 
         old_hostname = ssh.command('cat ~/cert').decode('utf-8').strip()
+        print('old_hostname=', old_hostname)
         hostname = info['basic']['data']['hostname']
-
+        print('hostname=', hostname)
         if old_hostname == hostname:
             # 主机名未变更 只更新硬件信息
             info['action'] = 'update'

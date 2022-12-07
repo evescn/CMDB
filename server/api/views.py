@@ -60,12 +60,12 @@ class Asset(APIView):
 
             # 更新 主板 + cpu + 基本信息 （这类信息只有1条数据）
             server_list = models.Server.objects.filter(hostname=hostname)
-            # now = datetime.datetime.now()
+            now = datetime.datetime.now()
             server_list.update(
                 **info['basic']['data'],
                 **info['cpu']['data'],
                 **info['main_board']['data'],
-                # latest_date=now,
+                latest_date=now,
             )
 
             from api.service import process_memory, process_disk, process_nic
@@ -85,12 +85,12 @@ class Asset(APIView):
             # 更新 主板 + cpu + 基本信息 （这类信息只有1条数据）
             # 此处也更新了更新主机名 info['basic']['data'] 中存放了新的主机名
             server_list = models.Server.objects.filter(hostname=cert)
-            # now = datetime.datetime.now()
+            now = datetime.datetime.now()
             server_list.update(
                 **info['basic']['data'],
                 **info['cpu']['data'],
                 **info['main_board']['data'],
-                # latest_date=now,
+                latest_date=now,
             )
 
             # 更新主机名，所以此处需要重新获取下 server_list 信息

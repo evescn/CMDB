@@ -28,8 +28,17 @@
             </div>
         </div>
     </form>
+{% endblock %}
 
-
-
-
+{% block js %}
+    <script type="text/javascript">
+        $("#id_latest_date").datetimepicker(
+            {
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                todayBtn: true,
+                minView: 'month',
+            }
+        );
+    </script>
 {% endblock %}

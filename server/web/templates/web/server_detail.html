@@ -1,0 +1,139 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}资产详细{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{#{% block breadcrumb %}#}
+{#    <!-- Content Header (Page header) -->#}
+{#    <section class="content-header">#}
+{#        <h1>#}
+{#            资产详细#}
+{#            <small>asset info</small>#}
+{#        </h1>#}
+{#        <ol class="breadcrumb">#}
+{#            <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>#}
+{#            <li>资产总表</li>#}
+{#            <li class="active">资产详细</li>#}
+{#        </ol>#}
+{#    </section>#}
+{#{% endblock %}#}
+
+{% block content %}
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="box">
+
+            <div class="box-body">
+                <h4><b>基本信息:</b></h4>
+                <table border="1" class="table  table-responsive"
+                       style="border-left:3px solid deepskyblue;border-bottom:1px solid deepskyblue">
+                    <thead>
+                    <tr>
+                        <th>主机名</th>
+                        <th>系统</th>
+                        <th>CPU个数</th>
+                        <th>SN</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ server_obj.hostname }}</td>
+                        <td>{{ server_obj.os_platform }}</td>
+                        <td>{{ server_obj.cpu_count }}</td>
+                        <td>{{ server_obj.sn }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <h4><b>网卡信息:</b></h4>
+                <table border="1" class="table  table-responsive"
+                       style="border-left:3px solid deepskyblue;border-bottom:1px solid deepskyblue">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>MAC地址</th>
+                        <th>IP地址</th>
+                        <th>子网掩码</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        {% for nic in server_obj.nic_list.all %}
+                            <td>{{ nic.name }}</td>
+                            <td>{{ nic.hwaddr }}</td>
+                            <td>{{ nic.ipaddrs }}</td>
+                            <td>{{ nic.netmask }}</td>
+                        {% endfor %}
+
+
+                    </tr>
+                    </tbody>
+                </table>
+
+                <h4><b>内存信息:</b></h4>
+                <table border="1" class="table  table-responsive"
+                       style="border-left:3px solid deepskyblue;border-bottom:1px solid deepskyblue">
+                    <thead>
+                    <tr>
+                        <th>插槽</th>
+                        <th>容量</th>
+                        <th>型号</th>
+                        <th>制造商</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for memory in memory_list %}
+                        <tr>
+
+                            <td>{{ memory.slot }}</td>
+                            <td>{{ memory.capacity }}</td>
+                            <td>{{ memory.model }}</td>
+                            <td>{{ memory.manufacturer }}</td>
+
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+
+                <h4><b>硬盘信息:</b></h4>
+                <table border="1" class="table  table-responsive"
+                       style="border-left:3px solid deepskyblue;border-bottom:1px solid deepskyblue">
+                    <thead>
+                    <tr>
+                        <th>插槽</th>
+                        <th>容量</th>
+                        <th>磁盘类型</th>
+                        <th>型号</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for disk in disk_list %}
+                        <tr>
+                            <td>{{ disk.slot }}</td>
+                            <td>{{ disk.capacity }}</td>
+                            <td>{{ disk.pd_type }}</td>
+                            <td>{{ disk.model }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /.box -->
+
+    </section>
+    <!-- /.content -->
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

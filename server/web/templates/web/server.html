@@ -21,24 +21,27 @@
         </tr>
         </thead>
         <tbody>
-            {% for server in all_servers %}
-                <tr>
+        {% for server in all_servers %}
+            <tr>
                 <td>{{ forloop.counter }}</td>
                 <td>{{ server.pk }}</td>
-                <td>{{ server.hostname }}</td>
+                <td><a href="{% url 'server_detail' server.pk %}">{{ server.hostname }}</a></td>
                 <td>{{ server.os_platform }}</td>
                 <td>{{ server.cpu_count }}</td>
                 <td>{{ server.get_device_status_id_display }}</td>
                 <td>{{ server.idc }}</td>
                 <td>{{ server.business_unit }}</td>
                 <td>{{ server.latest_date }}</td>
-                <td>    <a class="btn btn-warning btn-sm" href="{% url 'server_edit' server.pk %}">编辑</a>
-</td>
-                </tr>
-            {% endfor %}
+                <td>
+                    <a class="btn btn-warning btn-sm" href="{% url 'server_edit' server.pk %}">编辑</a>
+                    <a class="btn btn-info btn-sm" href="{% url 'server_record' server.pk %}">设备信息变更日志</a>
+                </td>
+            </tr>
+        {% endfor %}
 
 
         </tbody>
     </table>
 
 {% endblock %}
+

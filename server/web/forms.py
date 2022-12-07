@@ -14,3 +14,9 @@ class ServerForm(BSForm):
     class Meta:
         model = models.Server
         fields = '__all__'
+
+
+class BusinessUnitForm(BSForm):
+    class Meta:
+        model = models.BusinessUnit
+        fields = '__all__'
