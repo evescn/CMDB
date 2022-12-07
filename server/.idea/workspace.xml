@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54d3babe-959a-4dad-9a7a-f984a9a02452" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/static/imgs/archlinux.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/business_unit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/server_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/web/server_record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/conf/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../client/conf/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/core/engine/ssh.py" beforeDir="false" afterPath="$PROJECT_DIR$/../client/core/engine/ssh.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/web/server.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/server.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/evescn/Documents/GitHub/CMDB/server/static/imgs",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.selected.package.stylelint": ""
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/evescn/Documents/GitHub/CMDB/server/static/imgs&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/imgs" />
@@ -117,6 +97,7 @@
       <workItem from="1670203522185" duration="10525000" />
       <workItem from="1670310652497" duration="13106000" />
       <workItem from="1670396413467" duration="7339000" />
+      <workItem from="1670407005368" duration="70000" />
     </task>
     <servers />
   </component>
